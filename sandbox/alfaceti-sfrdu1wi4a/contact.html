@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Contact – Harbor Street Library</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html">Harbor Street Library</a>
+  <nav><a href="index.html">Home</a><a href="books.html">Books</a><a class="active" href="contact.html">Contact</a></nav>
+</div></header>
+
+<main><section><div class="wrap two">
+  <div>
+    <h2 id="contact-title">Get in touch</h2>
+    <p class="muted" style="margin-bottom:20px">Ask about membership, room bookings or a book you can't find. We reply within two working days.</p>
+    <ul class="hours">
+      <li><span>Address</span><span>14 Harbor Street</span></li>
+      <li><span>Phone</span><span>(011) 45678901</span></li>
+      <li><span>Email</span><span>hello@harborstreet.example</span></li>
+      <li><span>Sunday</span><span>10:00 am – 4:00 pm</span></li>
+    </ul>
+  </div>
+  <form id="contact-form" novalidate>
+    <label>Full name<input id="name" type="text" placeholder="Your name"></label>
+    <span class="error" id="name-error"></span>
+    <label>Email<input id="email" type="text" placeholder="you@example.com"></label>
+    <label>Topic
+      <select id="topic"><option>Membership</option><option>Room booking</option><option>Request a book</option><option>Other</option></select>
+    </label>
+    <label>Message<textarea id="message" rows="4" placeholder="How can we help?"></textarea></label>
+    <button class="btn" id="submit-btn" type="submit" style="background:#C97B63;border-radius:2px">Sumbit</button>
+    <p class="success" id="form-success" hidden></p>
+  </form>
+</div></section></main>
+
+<footer><div class="wrap">
+  <span>© 2026 Harbor Street Library</span>
+  <span>Call: 011-4567-8901 <a href="index.html">Privacy</a><a href="#">Accessibility</a></span>
+</div></footer>
+<script src="script.js"></script>
+</body></html>
