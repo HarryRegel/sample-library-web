@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Books – Harbor Street Library</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html">Harbor Street Library</a>
+  <nav><a href="index.html">Home</a><a class="active" href="books.html">Books</a><a href="contact.html">Contact</a></nav>
+</div></header>
+
+<main><section><div class="wrap">
+  <h1 style="font-size:2.4rem">Find a book</h1>
+  <p class="muted">Search by title, then borrow up to 3 books at a time.</p>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search by title">
+    <select id="category">
+      <option value="all">All categories</option>
+      <option value="fiction">Fiction</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <option value="sci-fi">Sci-Fi</option>
+    </select>
+  </div>
+  <p class="muted" id="result-count" style="margin-bottom:14px"></p>
+  <div class="grid" id="book-grid"></div>
+  <p id="borrow-msg" class="success" hidden></p>
+</div></section></main>
+
+<footer><div class="wrap">
+  <span>© 2024 Harbor Street Library</span>
+  <span>Call: +91 11 4567 8901 <a href="index.html">Privacy</a><a href="contact.html">Accessibility</a></span>
+</div></footer>
+<script src="script.js"></script>
+</body></html>
