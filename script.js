@@ -24,7 +24,7 @@ function renderBooks(list) {
     const card = document.createElement("article");
     card.className = "card";
     card.innerHTML = `
-      <div class="cover" style="background:${b.color}">${b.title[0]}</div>
+      <div class="cover" style="background:linear-gradient(to top,rgba(19,35,58,.78),rgba(19,35,58,.05)),url(https://picsum.photos/seed/${encodeURIComponent(b.title)}/400/300) center/cover,${b.color}">${b.title[0]}</div>
       <h3>${b.title}</h3>
       <p class="muted">${b.author}</p>
       <span class="tag">${b.cat}</span>
