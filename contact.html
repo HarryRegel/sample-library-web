@@ -1,38 +1,81 @@
 <!DOCTYPE html>
-<html lang="en"><head><title>Contact – Harbor Street Library</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<html lang="en">
+<head>
+  <title>Visit &amp; contact – Harbor Street Library</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan a visit or get in touch with Harbor Street Library. We’re here to help you find your next good read.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="site-header"><div class="wrap">
-  <a class="logo" href="index.html">Harbor Street Library</a>
-  <nav><a href="index.html">Home</a><a href="books.html">Books</a><a class="active" href="contact.html">Contact</a></nav>
-</div></header>
-
-<main><section><div class="wrap two">
-  <div>
-    <h2 id="contact-title">Get in touch</h2>
-    <p class="muted" style="margin-bottom:20px">Ask about membership, room bookings or a book you can't find. We reply within two working days.</p>
-    <ul class="hours">
-      <li><span>Address</span><span>14 Harbor Street</span></li>
-      <li><span>Phone</span><span>(011) 45678901</span></li>
-      <li><span>Email</span><span>hello@harborstreet.example</span></li>
-      <li><span>Sunday</span><span>10:00 am – 4:00 pm</span></li>
-    </ul>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">h</span>Harbor Street <span>Library</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="books.html">Explore books</a>
+      <a class="active" href="contact.html">Visit &amp; contact</a>
+    </nav>
+    <a class="header-cta" href="books.html">Find a book <span aria-hidden="true">↗</span></a>
   </div>
-  <form id="contact-form" novalidate>
-    <label>Full name<input id="name" type="text" placeholder="Your name"></label>
-    <span class="error" id="name-error"></span>
-    <label>Email<input id="email" type="text" placeholder="you@example.com"></label>
-    <label>Topic
-      <select id="topic"><option>Membership</option><option>Room booking</option><option>Request a book</option><option>Other</option></select>
-    </label>
-    <label>Message<textarea id="message" rows="4" placeholder="How can we help?"></textarea></label>
-    <button class="btn" id="submit-btn" type="submit" style="background:#C97B63;border-radius:2px">Sumbit</button>
-    <p class="success" id="form-success" hidden></p>
-  </form>
-</div></section></main>
+</header>
+
+<main class="contact-page">
+  <section class="contact-hero">
+    <div class="wrap">
+      <p class="eyebrow">We’re just around the corner</p>
+      <h1>Come say <em>hello.</em></h1>
+      <p class="contact-intro">Questions about membership, room bookings, or a book you can’t find? We’d love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="contact-content">
+    <div class="wrap contact-layout">
+      <div class="visit-card">
+        <img class="visit-image" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="A welcoming neighborhood café and gathering space">
+        <div class="visit-details">
+          <p class="eyebrow">Your neighborhood library</p>
+          <h2 id="contact-title">Make yourself at home.</h2>
+          <p class="visit-description">Come browse the shelves, join a community event, or just find a comfortable place to read for a while.</p>
+          <div class="contact-detail"><span class="detail-icon" aria-hidden="true">⌖</span><span><strong>Find us</strong><a href="https://maps.google.com/?q=14+Harbor+Street+New+Delhi">14 Harbor Street, New Delhi</a></span></div>
+          <div class="contact-detail"><span class="detail-icon" aria-hidden="true">↗</span><span><strong>Give us a call</strong><a href="tel:+911145678901">+91 11 4567 8901</a></span></div>
+          <div class="contact-detail"><span class="detail-icon" aria-hidden="true">✉</span><span><strong>Send us a note</strong><a href="mailto:hello@harborstreet.example">hello@harborstreet.example</a></span></div>
+          <div class="visit-hours">
+            <div><strong>Mon – Fri</strong><span>9 am – 7 pm</span></div>
+            <div><strong>Saturday</strong><span>10 am – 5 pm</span></div>
+            <div><strong>Sunday</strong><span>Closed</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-panel">
+        <p class="eyebrow">A note to our team</p>
+        <h2>How can we help?</h2>
+        <p class="form-intro">Leave us a message and we’ll get back to you within two working days.</p>
+        <form id="contact-form" novalidate>
+          <label for="name">Full name<input id="name" name="name" type="text" placeholder="Your name" aria-describedby="name-error"></label>
+          <span class="error" id="name-error" aria-live="polite"></span>
+          <label for="email">Email address<input id="email" name="email" type="email" placeholder="you@example.com"></label>
+          <label for="topic">What’s it about?
+            <select id="topic" name="topic"><option>Membership</option><option>Room booking</option><option>Request a book</option><option>Other</option></select>
+          </label>
+          <label for="message">Your message<textarea id="message" name="message" rows="4" placeholder="Tell us a little more..."></textarea></label>
+          <button class="btn" id="submit-btn" type="submit">Send your message <span aria-hidden="true">→</span></button>
+          <p class="success form-success" id="form-success" role="status" hidden></p>
+        </form>
+        <p class="privacy-note">Your details are only used to reply to your message.</p>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer><div class="wrap">
-  <span>© 2026 Harbor Street Library</span>
-  <span>Call: 011-4567-8901 <a href="index.html">Privacy</a><a href="#">Accessibility</a></span>
+  <a class="logo footer-logo" href="index.html"><span class="logo-mark" aria-hidden="true">h</span>Harbor Street <span>Library</span></a>
+  <span>© 2026 Harbor Street Library · 14 Harbor Street, New Delhi</span>
+  <span>Call: +91 11 4567 8901 <a href="index.html">Privacy</a><a href="#">Accessibility</a></span>
 </div></footer>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
